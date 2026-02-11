@@ -153,19 +153,66 @@ function dailyplanner() {
 dailyplanner()
 
 function motivation() {
-    let motivationQuote = document.querySelector('.quote-container .m2')
-    let motivationAuthor = document.querySelector('.quote-container .m3')
+    let motivationQuote = document.querySelector('.quote-container .m2');
+    let motivationAuthor = document.querySelector('.quote-container .m3');
 
-    async function fetchQuote() {
-        let mapi = await fetch('https://api.quotable.io/random')
-        let data = await mapi.json()
+    const quotes = [
+        {content: "Push yourself, because no one else is going to do it for you.", author: "Unknown"},
+        {content: "Dream big. Start small. Act now.", author: "Robin Sharma"},
+        {content: "Consistency beats motivation.", author: "Anonymous"},
+        {content: "Success doesn’t just find you. You have to go out and get it.", author: "Unknown"},
+        {content: "Great things never come from comfort zones.", author: "Anonymous"},
+        {content: "Don’t stop until you’re proud.", author: "Unknown"},
+        {content: "Small steps every day lead to big results.", author: "Anonymous"},
+        {content: "Your only limit is your mind.", author: "Unknown"},
+        {content: "Difficult roads often lead to beautiful destinations.", author: "Unknown"},
+        {content: "Stay positive. Work hard. Make it happen.", author: "Unknown"},
+        {content: "Discipline is choosing between what you want now and what you want most.", author: "Abraham Lincoln"},
+        {content: "Do something today that your future self will thank you for.", author: "Unknown"},
+        {content: "Believe you can and you’re halfway there.", author: "Theodore Roosevelt"},
+        {content: "Success is the sum of small efforts repeated daily.", author: "Robert Collier"},
+        {content: "Focus on progress, not perfection.", author: "Unknown"},
+        {content: "The best way to get started is to quit talking and begin doing.", author: "Walt Disney"},
+        {content: "Your future is created by what you do today.", author: "Unknown"},
+        {content: "Hard work beats talent when talent doesn’t work hard.", author: "Tim Notke"},
+        {content: "Don’t watch the clock; do what it does. Keep going.", author: "Sam Levenson"},
+        {content: "You are capable of amazing things.", author: "Unknown"},
+        {content: "It always seems impossible until it's done.", author: "Nelson Mandela"},
+        {content: "Opportunities don’t happen. You create them.", author: "Chris Grosser"},
+        {content: "Start where you are. Use what you have. Do what you can.", author: "Arthur Ashe"},
+        {content: "Success is not for the lazy.", author: "Unknown"},
+        {content: "Don’t limit your challenges. Challenge your limits.", author: "Unknown"},
+        {content: "Work hard in silence. Let success make the noise.", author: "Frank Ocean"},
+        {content: "Every day is a second chance.", author: "Unknown"},
+        {content: "Make today count.", author: "Unknown"},
+        {content: "You don’t have to be great to start, but you have to start to be great.", author: "Zig Ziglar"},
+        {content: "Stay hungry. Stay foolish.", author: "Steve Jobs"}
+    ];
 
-        motivationQuote.innerHTML = data.content
-        motivationAuthor.innerHTML = data.author
+    let lastIndex = -1;
+
+    function showRandomQuote() {
+        let randomIndex;
+
+
+        do {
+            randomIndex = Math.floor(Math.random() * quotes.length);
+        } while (randomIndex === lastIndex);
+
+        lastIndex = randomIndex;
+
+        motivationQuote.innerHTML = quotes[randomIndex].content;
+        motivationAuthor.innerHTML = quotes[randomIndex].author;
     }
 
-    fetchQuote()
+
+    showRandomQuote();
+
+    setInterval(showRandomQuote, 10000);
 }
+
+motivation();
+
 
 motivation()
 
