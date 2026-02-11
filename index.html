@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productivity Dashboard</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="main">
+        <section class="heading">
+            <img src="favicon.png" alt="">
+            <h2>Productivity Dashboard</h2>
+        </section>
+        <section class="weatherbox">
+            <div class="dtc">
+            <h2 class="wdate">
+                
+            </h2>
+            <h2 class="wtime">
+                
+            </h2>
+            <h3 class="city">Bhopal (MP)
+            </h3>
+            </div>
+            <div class="climate">
+                <div class="c1">
+                    <h2 class="tapmaan"></h2>
+                    <h2 class="current-status"></h2>
+                </div>
+                <div class="c2">
+                    <h2 class="pct"></h2>
+                    <h2 class="hmd"></h2>
+                    <h2 class="wd"></h2>
+                </div>
+            </div>
+        </section>
+        <section class="allelems">
+            <div class="todo elem" id="0">
+                <i class="ri-bar-chart-2-fill"></i>
+                <h1>To Do List</h1>
+            </div>
+            <div class="dailyp elem" id="1">
+                <i class="ri-calendar-event-line"></i>
+                <h1>Daily Planner</h1>
+            </div>
+            <div class="moti elem" id="2">
+                <i class="ri-trophy-fill"></i>
+                <h1>Motivation</h1>
+            </div>
+            <div class="pomo elem" id="3">
+                <i class="ri-time-fill"></i>
+                <h1>Pomodoro Timer</h1>
+            </div>
+            <div class="dg elem" id="4">
+                <i class="ri-target-line"></i>
+                <h1>Daily Goals</h1>
+            </div>
+        </section>
+
+        <section class="fullelems td-fullpage">
+            <button class="back" id="0">Close</button>
+            <h2>Your Personalised Task List</h2>
+            <div class="task-container">
+                <div class="addtask">
+                    <form>
+                        <input placeholder="Enter your Task" type="text">
+                        <textarea placeholder="Enter Details" name="" id=""></textarea>
+                        <div class="imp-mark">
+                            <input type="checkbox" id="checkbox">
+                            <label for="checkbox">Mark as Important!</label>
+                        </div>
+                        <button>Add Task</button>
+                    </form>
+                </div>
+                <div class="tasklist">
+                </div>
+            </div>
+        </section>
+        <section class="fullelems dp-fullpage">
+            <button class="back" id="1">Close</button>
+            <h2>Make your Day Productive</h2>
+            <div class="dp-container">
+            </div>
+        </section>
+        <section class="fullelems mv-fullpage">
+            <button class="back" id="2">Close</button>
+            <div class="m-container">
+                <div class="quote-container">
+                    <div class="m1">
+                        <h3>Quote of the Day</h3>
+                    </div>
+                    <img src="icons8-quote-left-48.png" alt="">
+                    <div class="m2">
+                    </div>
+                    <div class="m3">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="fullelems pd-fullpage">
+            <button class="back" id="3">Close</button>
+            <h2>Study with Me!</h2>
+            <div class="pomo-container">
+                <div class="status">
+                    <h2>Work Session</h2>
+                </div>
+                <p>25:00</p>
+                <div class="pomo-buttons">
+                    <button id="s">Start</button>
+                    <button id="p">Pause</button>
+                    <button id="r">Reset</button>
+                </div>
+            </div>
+
+        </section>
+        <section class="fullelems dg-fullpage">
+            <button class="back" id="4">Close</button>
+            <h2>What's to achieve today?</h2>
+            <div class="goal-container">
+                <div class="addgoal">
+                    <form>
+                        <input placeholder="Enter your Goal" type="text">
+                        <textarea placeholder="Enter Details" name="" id=""></textarea>
+                        <div class="imp-mark">
+                            <input type="checkbox" id="checkbox">
+                            <label for="checkbox">Mark as Important!</label>
+                        </div>
+                        <button>Add Goal</button>
+                    </form>
+                </div>
+                <div class="goallist">
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
